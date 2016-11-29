@@ -10,17 +10,17 @@
 </h1>
 
 <p>
-  <a href="#">Yes, I would like to login</a>
+  <%= link_to 'Yes, I would like to login', new_user_session_path %>
 </p>
 
 <p>
-  <a href="#">No, I need to create an account</a>
+  <%= link_to 'No, I need to create an account', new_user_registration_path %>
 </p>
 
 <hr>
 
 <div class="panel panel-border-wide">
   <p>
-    I'm asking this question because the guidelines suggest it is better to split the login/register process into two screens and asking the user whether they are already signed up, before presenting the relevant form.
+    The guidelines suggest it's better to split the login/register process into two screens and asking the user whether they are already signed up, before presenting the relevant form.
   </p>
 </div>

@@ -11,8 +11,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'govuk_template'
-gem 'govuk_frontend_toolkit' 
+gem 'govuk_frontend_toolkit'
 gem 'govuk_elements_rails'
+
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platform: :mri
