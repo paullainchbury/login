@@ -4,6 +4,14 @@
   <%= javascript_include_tag 'application' %>
 <% end %>
 
-
+<% content_for :content do %>
+  <main id="content">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <%= yield %>
+      </div>
+    </div>
+  </main>
+<% end %>
 
 <%= render file: 'layouts/govuk_template' %>
