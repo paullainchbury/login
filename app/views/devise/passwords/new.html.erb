@@ -3,10 +3,12 @@
 </h1>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div class="form-group">
+  <div class="form-group <%= 'error' if f.object.errors[:email].any? %>">
     <%= f.label :email, class: 'form-label' %>
+    <% if f.object.errors[:email].any? %>
+      <span class="error-message">Email <%= f.object.errors[:email].first %></span>
+    <% end %>
     <%= f.email_field :email, autofocus: true, class: "form-control" %>
   </div>
 
